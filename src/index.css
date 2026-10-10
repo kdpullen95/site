@@ -1,0 +1,10 @@
+body {
+	background-color: var(--sky);
+	color: var(--text);
+}
+
+:root {
+	--spacer-sm: 15px;
+	--spacer-md: 30px;
+	--spacer-lg: 60px;
+}
