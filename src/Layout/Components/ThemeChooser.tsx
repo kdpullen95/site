@@ -1,11 +1,11 @@
-import { THEMES, useTheme } from "../../Hooks/themes";
+import { Themes } from "../../Hooks/themes";
 
 export function ThemeChooser() {
-	const { theme, setTheme } = useTheme();
+	const { theme, setTheme } = Themes.useTheme();
 
 	return (
 		<select value={theme} onChange={(e) => setTheme(e.target.value)}>
-			{Object.keys(THEMES).map((theme) => (
+			{Themes.LIST.map((theme) => (
 				<option key={theme} value={theme}>
 					{theme}
 				</option>

@@ -1,7 +1,8 @@
 import type { PropsWithChildren } from "react";
 import { Stack } from "../Components/Stack";
-import { NAV_ITEMS } from "./Data";
 import { Header } from "./Header";
+
+export const NAV_ITEMS: Header.NavItem[] = [];
 
 export function Frame({ children }: PropsWithChildren) {
 	return (
