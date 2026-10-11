@@ -1,5 +1,6 @@
 import {
 	createContext,
+	useCallback,
 	useContext,
 	useEffect,
 	useMemo,
@@ -33,9 +34,12 @@ export namespace Theme {
 
 	export function Provider({ children }: PropsWithChildren) {
 		const [theme, set] = useState<Id>("Thunderstorm");
-		const setTheme = (value: string) => {
-			if (isId(value)) set(value);
-		};
+		const setTheme = useCallback(
+			(value: string) => {
+				if (isId(value)) set(value);
+			},
+			[set],
+		);
 		useEffect(() => {
 			document
 				.getElementById("theme-css")
